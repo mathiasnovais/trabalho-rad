@@ -805,48 +805,6 @@ app_img_salvar = ImageTk.PhotoImage(app_img_salvar)
 app_salvar = Button(frame_dados, command=lambda:control('salvar'), image=app_img_salvar, text="Salvar", width=100, compound=LEFT, overrelief=RIDGE, font=('Ivy 11'), bg=co1, fg=co0)
 app_salvar.place(x=236, y=30)
 
-def export_to_txt():
-    # Conectar ao banco de dados
-    conn = sqlite3.connect('seu_banco_de_dados.db')
-    cursor = conn.cursor()
-    
-    # Executar a consulta para obter os dados
-    cursor.execute("SELECT * FROM sua_tabela")
-    rows = cursor.fetchall()
-    
-    # Fechar a conexão
-    conn.close()
-    
-    # Abrir uma janela de diálogo para salvar o arquivo
-    file_path = fd.asksaveasfilename(defaultextension=".txt",
-                                             filetypes=[("Text files", "*.txt"),
-                                                        ("All files", "*.*")])
-    if not file_path:
-        return  # Usuário cancelou a operação
-    
-    # Salvar os dados no arquivo
-    with open(file_path, 'w') as file:
-        for row in rows:
-            file.write("\t".join(map(str, row)) + "\n")
-    
-    # Exibir mensagem de sucesso
-    messagebox.showinfo("Exportação concluída", f"Dados exportados com sucesso para {file_path}")
-
-
-root = Tk()
-root.title("Seu Aplicativo")
-
-# Seus outros componentes Tkinter aqui
-
-# Botão para exportar os dados
-export_button = Button(root, text="Exportar para TXT", command=export_to_txt)
-export_button.pack(pady=20)
-
-root.mainloop()
-
-
-
-
 
 alunos()
 janela.mainloop()
