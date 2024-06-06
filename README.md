@@ -17,6 +17,7 @@ Manipulação de arquivos: o sistema deve ser capaz de salvar as tarefas em um a
 Manipulação de logs: o sistema deve ser capaz de gerar arquivos txt.
 6.
 Organização e qualidade do código: o código deve estar bem-organizado e comentários explicativos.
-7.
+('tudo bem simples e dinamico, facil de usar e bem didatico')
+8.
 Testes e validação: o sistema deve ser testado para verificar seu correto funcionamento, além de realizar validação adequada dos dados.
-(no meu computador e inclusive em sala realizei os teste e tirei duvidas com o professor inclusive conseguindo me ajudar em dificuldades do banco de dados)
+('no meu computador e inclusive em sala realizei os teste e tirei duvidas com o professor inclusive conseguindo me ajudar em dificuldades do banco de dados')
