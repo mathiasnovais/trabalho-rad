@@ -5,8 +5,6 @@ from tkinter import messagebox
 from tkinter import filedialog as fd
 
 
-
-
 # importando pillow
 import PIL.Image
 from PIL import ImageTk, Image
@@ -203,8 +201,8 @@ def alunos():
         #funcao deletar aluno
         def delete_aluno():
             try:
-                tree_itens = tree_aluno.focus()
-                tree_dicionario = tree_aluno.item(tree_itens)
+                tree_itens = tree.focus()
+                tree_dicionario = tree.item(tree_itens)
                 tree_lista = tree_dicionario['values']
 
                 valor_id = tree_lista[0]
@@ -806,7 +804,9 @@ app_salvar = Button(frame_dados, command=lambda:control('salvar'), image=app_img
 app_salvar.place(x=236, y=30)
 
 
+
 alunos()
 janela.mainloop()
+
 
 
