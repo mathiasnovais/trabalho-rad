@@ -256,11 +256,11 @@ def alunos():
         e_cpf.place(x=450, y=100)    
         
         # Pegando as Turmas
-        turmas = ver_turmas()
+        turmas = ['Turma A','Turma B']
         turma = []
         
         for i in turmas:
-            turma.append(i[1])
+            turma.append(i)
             
         l_turma = Label(frame_detalhes, text="Turma *", height=1, anchor=NW, font=('Ivy 10'), bg=co1, fg=co4)
         l_turma.place(x=446, y=130)    
